@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <QuartzCore/QuartzCore.h>
+#import "WNPreviewView.h"
 
 @interface WNViewController : UIViewController<AVCaptureVideoDataOutputSampleBufferDelegate>{
 
@@ -23,7 +24,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITextView *messageField;
-@property (weak, nonatomic) IBOutlet UIView *videoView;
+@property (weak, nonatomic) IBOutlet WNPreviewView *videoView;
 
 - (IBAction)startAction:(id)sender;
 
@@ -33,3 +34,4 @@
 
 
 @end
+

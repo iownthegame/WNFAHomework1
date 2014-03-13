@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184593CD18D1C6D700AEBC2E /* WNPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184593CC18D1C6D700AEBC2E /* WNPreviewView.m */; };
 		1845FA4018CDA64000C1B002 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1845FA3F18CDA64000C1B002 /* Foundation.framework */; };
 		1845FA4218CDA64000C1B002 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1845FA4118CDA64000C1B002 /* CoreGraphics.framework */; };
 		1845FA4418CDA64000C1B002 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1845FA4318CDA64000C1B002 /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184593CB18D1C6D700AEBC2E /* WNPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNPreviewView.h; sourceTree = "<group>"; };
+		184593CC18D1C6D700AEBC2E /* WNPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNPreviewView.m; sourceTree = "<group>"; };
 		1845FA3C18CDA64000C1B002 /* WNFAHomework1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WNFAHomework1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1845FA3F18CDA64000C1B002 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1845FA4118CDA64000C1B002 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,6 +128,8 @@
 				1845FA5118CDA64000C1B002 /* Main.storyboard */,
 				1845FA5418CDA64000C1B002 /* WNViewController.h */,
 				1845FA5518CDA64000C1B002 /* WNViewController.m */,
+				184593CB18D1C6D700AEBC2E /* WNPreviewView.h */,
+				184593CC18D1C6D700AEBC2E /* WNPreviewView.m */,
 				1845FA5718CDA64000C1B002 /* Images.xcassets */,
 				1845FA4618CDA64000C1B002 /* Supporting Files */,
 			);
@@ -258,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184593CD18D1C6D700AEBC2E /* WNPreviewView.m in Sources */,
 				1845FA5618CDA64000C1B002 /* WNViewController.m in Sources */,
 				1845FA4C18CDA64000C1B002 /* main.m in Sources */,
 				1845FA5018CDA64000C1B002 /* WNAppDelegate.m in Sources */,
@@ -469,6 +475,7 @@
 				1845FA7018CDA64000C1B002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1845FA7118CDA64000C1B002 /* Build configuration list for PBXNativeTarget "WNFAHomework1Tests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +484,7 @@
 				1845FA7318CDA64000C1B002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

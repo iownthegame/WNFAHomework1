@@ -62,8 +62,8 @@
     
     videoDataOutput = [[AVCaptureVideoDataOutput alloc]init];
     [videoDataOutput setVideoSettings:[NSDictionary dictionaryWithObjectsAndKeys:
-                                       [NSNumber numberWithFloat:640.0], (id)kCVPixelBufferWidthKey,
-                                       [NSNumber numberWithFloat:480.0], (id)kCVPixelBufferHeightKey,
+                                       //[NSNumber numberWithFloat:640.0], (id)kCVPixelBufferWidthKey,
+                                       //[NSNumber numberWithFloat:480.0], (id)kCVPixelBufferHeightKey,
                                        [NSNumber numberWithInt:kCVPixelFormatType_32BGRA],(id)kCVPixelBufferPixelFormatTypeKey,
                                        nil]];
     
@@ -79,7 +79,7 @@
     
     previewLayer = [[AVCaptureVideoPreviewLayer alloc]initWithSession:captureSession];
     [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
-    previewLayer.frame = self.videoView.frame;
+    previewLayer.frame = self.videoView.bounds;
 
     [self.videoView.layer addSublayer:previewLayer];
 
@@ -99,7 +99,9 @@
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection{
 
-    NSLog(@"capture Video");
+    //NSLog(@"capture Video");
 
 }
 @end
+
+
