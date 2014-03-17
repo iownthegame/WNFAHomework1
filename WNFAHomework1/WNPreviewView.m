@@ -76,7 +76,7 @@
     Class captureDeviceClass = NSClassFromString(@"AVCaptureDevice");
     
     if (captureDeviceClass != nil) {
-        AVCaptureDevice *device = [captureDeviceClass defaultDeviceWithMediaType:AVMediaTypeVideo];
+        AVCaptureDevice *device = [self getBackCamera];
         if([device isFocusPointOfInterestSupported] &&
            [device isFocusModeSupported:AVCaptureFocusModeAutoFocus]) {
             CGRect screenRect = [[UIScreen mainScreen] bounds];
@@ -97,6 +97,19 @@
         
     }
     
+}
+
+- (AVCaptureDevice *)getBackCamera{
+
+    NSArray *devices = [AVCaptureDevice devices];
+    
+    for(AVCaptureDevice *device in devices){
+        
+        if([device position] == AVCaptureDevicePositionBack){
+            return device;
+        }
+    }
+    return nil;
 }
 
 

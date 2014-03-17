@@ -11,6 +11,10 @@
 #import <QuartzCore/QuartzCore.h>
 #import "WNPreviewView.h"
 
+int Threshold = 200;
+int preambleThrshold = 100000;
+double rgbDiffRatioThreshold = 0.7;
+
 @interface WNViewController : UIViewController<AVCaptureVideoDataOutputSampleBufferDelegate>{
 
     AVCaptureSession *captureSession;
@@ -21,6 +25,20 @@
     
     CFTimeInterval basedTime;
 
+    CGImageRef cgImage;
+    
+    BOOL indexR;
+    BOOL indexG;
+    BOOL indexB;
+    
+    int hist[4];
+    
+    int recvBitCounter;
+    unsigned char recvChar;
+    
+    NSMutableString *mesg;
+    
+    BOOL isRecvMesg;
 }
 
 @property (weak, nonatomic) IBOutlet UITextView *messageField;
