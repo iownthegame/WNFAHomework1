@@ -24,6 +24,8 @@
 		1845FA6B18CDA64000C1B002 /* WNFAHomework1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1845FA6A18CDA64000C1B002 /* WNFAHomework1Tests.m */; };
 		1845FA7518CDA76A00C1B002 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1845FA7418CDA76A00C1B002 /* AVFoundation.framework */; };
 		1845FA7718CDABEA00C1B002 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1845FA7618CDABEA00C1B002 /* QuartzCore.framework */; };
+		18E6235F18DAD55A0095C3FD /* play-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E6235E18DAD55A0095C3FD /* play-button.png */; };
+		18E6236118DAD9080095C3FD /* pause-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E6236018DAD9080095C3FD /* pause-button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		1845FA6A18CDA64000C1B002 /* WNFAHomework1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WNFAHomework1Tests.m; sourceTree = "<group>"; };
 		1845FA7418CDA76A00C1B002 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1845FA7618CDABEA00C1B002 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		18E6235E18DAD55A0095C3FD /* play-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-button.png"; sourceTree = "<group>"; };
+		18E6236018DAD9080095C3FD /* pause-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause-button.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				1845FA5518CDA64000C1B002 /* WNViewController.m */,
 				184593CB18D1C6D700AEBC2E /* WNPreviewView.h */,
 				184593CC18D1C6D700AEBC2E /* WNPreviewView.m */,
+				18E6235E18DAD55A0095C3FD /* play-button.png */,
+				18E6236018DAD9080095C3FD /* pause-button.png */,
 				1845FA5718CDA64000C1B002 /* Images.xcassets */,
 				1845FA4618CDA64000C1B002 /* Supporting Files */,
 			);
@@ -243,6 +249,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1845FA5818CDA64000C1B002 /* Images.xcassets in Resources */,
+				18E6235F18DAD55A0095C3FD /* play-button.png in Resources */,
+				18E6236118DAD9080095C3FD /* pause-button.png in Resources */,
 				1845FA4A18CDA64000C1B002 /* InfoPlist.strings in Resources */,
 				1845FA5318CDA64000C1B002 /* Main.storyboard in Resources */,
 			);

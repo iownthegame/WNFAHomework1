@@ -34,16 +34,16 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" alpha="0.39999999999999963" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSk-QY-OZM">
-                                <rect key="frame" x="474" y="259" width="74" height="41"/>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSk-QY-OZM">
+                                <rect key="frame" x="20" y="110" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="Ax4-wy-dOv"/>
-                                    <constraint firstAttribute="width" constant="74" id="PEx-Y9-SnZ"/>
+                                    <constraint firstAttribute="height" constant="100" id="Ax4-wy-dOv"/>
+                                    <constraint firstAttribute="width" constant="100" id="PEx-Y9-SnZ"/>
                                 </constraints>
                                 <color key="tintColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Start">
+                                <state key="normal" title="Start" image="play-button.png">
                                     <color key="titleColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -54,11 +54,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="mSk-QY-OZM" firstAttribute="centerY" secondItem="i6r-Qj-GdC" secondAttribute="centerY" id="6Qs-08-mss"/>
                             <constraint firstAttribute="bottom" secondItem="i6r-Qj-GdC" secondAttribute="bottom" id="IbG-V9-fVD"/>
                             <constraint firstAttribute="trailing" secondItem="i6r-Qj-GdC" secondAttribute="trailing" id="TiH-MR-ITu"/>
                             <constraint firstAttribute="trailing" secondItem="gsZ-JA-Mgw" secondAttribute="trailing" constant="20" symbolic="YES" id="aYQ-oB-zwZ"/>
-                            <constraint firstItem="gsZ-JA-Mgw" firstAttribute="trailing" secondItem="mSk-QY-OZM" secondAttribute="trailing" id="d9k-2r-iPj"/>
-                            <constraint firstItem="mSk-QY-OZM" firstAttribute="top" secondItem="gsZ-JA-Mgw" secondAttribute="bottom" constant="13" id="dvh-8U-iW9"/>
+                            <constraint firstItem="mSk-QY-OZM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="i63-wa-Igt"/>
                             <constraint firstItem="i6r-Qj-GdC" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="iDQ-Mu-Oii"/>
                             <constraint firstItem="gsZ-JA-Mgw" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" symbolic="YES" id="ssT-1W-KvR"/>
                             <constraint firstItem="i6r-Qj-GdC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="td8-2M-uE0"/>
@@ -75,6 +75,9 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="play-button.png" width="400" height="400"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

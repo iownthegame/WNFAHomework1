@@ -126,10 +126,19 @@ typedef enum {
     indexR = NO;
     indexG = NO;
     indexB = NO;
-    isRecvMesg = YES;
-    recvChar = 0;
-    recvBitCounter = 0;
-    NSLog(@"start");
+    UIButton *startBtn = (UIButton *)sender;
+    
+    if(isRecvMesg){
+        isRecvMesg = NO;
+        [startBtn setImage:[UIImage imageNamed:@"play-button.png"] forState:UIControlStateNormal];
+    }
+    else{
+        isRecvMesg = YES;
+        [startBtn setImage:[UIImage imageNamed:@"pause-button.png"] forState:UIControlStateNormal];
+        recvChar = 0;
+        recvBitCounter = 0;
+        NSLog(@"start");
+    }
     
 }
 
