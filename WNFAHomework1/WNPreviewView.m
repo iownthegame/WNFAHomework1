@@ -35,40 +35,40 @@
 
 @implementation WNPreviewView
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-
-
-    UITouch *touch = [[event allTouches] anyObject];
-    CGPoint touchPoint = [touch locationInView:touch.view];
-    
-    [self focus:touchPoint];
-    
-    if(camFocus){
-        [camFocus removeFromSuperview];
-    }
-    
-    if([[touch view] isKindOfClass:[WNPreviewView class]]){
-    
-        camFocus = [[CameraFocusSquare alloc]initWithFrame:CGRectMake(touchPoint.x-40,
-                                                                      touchPoint.y-40,
-                                                                      80,
-                                                                      80)];
-        [camFocus setBackgroundColor:[UIColor clearColor]];
-        [self addSubview:camFocus];
-        [camFocus setNeedsDisplay];
-        
-        [UIView animateWithDuration:1.5 animations:^{
-            [camFocus setAlpha:0.0];
-        
-        }];
-        //[UIView beginAnimations:nil context:NULL];
-        //[UIView setAnimationDuration:1.5];
-        //[camFocus setAlpha:0.0];
-        //[UIView commitAnimations];
-    }
-    NSLog(@"touch");
-    
-}
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+//
+//
+//    UITouch *touch = [[event allTouches] anyObject];
+//    CGPoint touchPoint = [touch locationInView:touch.view];
+//    
+//    [self focus:touchPoint];
+//    
+//    if(camFocus){
+//        [camFocus removeFromSuperview];
+//    }
+//    
+//    if([[touch view] isKindOfClass:[WNPreviewView class]]){
+//    
+//        camFocus = [[CameraFocusSquare alloc]initWithFrame:CGRectMake(touchPoint.x-40,
+//                                                                      touchPoint.y-40,
+//                                                                      80,
+//                                                                      80)];
+//        [camFocus setBackgroundColor:[UIColor clearColor]];
+//        [self addSubview:camFocus];
+//        [camFocus setNeedsDisplay];
+//        
+//        [UIView animateWithDuration:1.5 animations:^{
+//            [camFocus setAlpha:0.0];
+//        
+//        }];
+//        //[UIView beginAnimations:nil context:NULL];
+//        //[UIView setAnimationDuration:1.5];
+//        //[camFocus setAlpha:0.0];
+//        //[UIView commitAnimations];
+//    }
+//    NSLog(@"touch");
+//    
+//}
 
 - (void) focus:(CGPoint) aPoint{
 
@@ -86,9 +86,11 @@
             double focus_y = aPoint.y/screenHeight;
             if([device lockForConfiguration:nil]) {
                 [device setFocusPointOfInterest:CGPointMake(focus_x,focus_y)];
-                [device setFocusMode:AVCaptureFocusModeAutoFocus];
-                if ([device isExposureModeSupported:AVCaptureExposureModeAutoExpose]){
-                    [device setExposureMode:AVCaptureExposureModeAutoExpose];
+                //[device setFocusMode:AVCaptureFocusModeAutoFocus];
+                [device setFocusMode:AVCaptureFocusModeLocked];
+                if ([device isExposureModeSupported:AVCaptureExposureModeLocked]){
+                    //[device setExposureMode:AVCaptureExposureModeAutoExpose];
+                     [device setExposureMode:AVCaptureExposureModeLocked];
                 }
                 [device unlockForConfiguration];
             }

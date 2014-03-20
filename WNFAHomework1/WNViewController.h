@@ -12,8 +12,8 @@
 #import "WNPreviewView.h"
 
 int Threshold = 200;
-int preambleThrshold = 100000;
-double rgbDiffRatioThreshold = 0.7;
+int preambleThrshold = 291600 * 0.03;
+double rgbDiffRatioThreshold = 0.65;
 
 @interface WNViewController : UIViewController<AVCaptureVideoDataOutputSampleBufferDelegate>{
 

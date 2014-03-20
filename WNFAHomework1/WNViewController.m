@@ -42,6 +42,19 @@ typedef enum {
     recvBitCounter = 0;
     recvChar = 0;
     mesg = [[NSMutableString alloc]init];
+    [mesg appendString:@">>> "];
+    
+    UIView *boundView = [[UIView alloc]init];
+    boundView.backgroundColor = [UIColor clearColor];
+    boundView.layer.borderWidth = 2.0;
+    boundView.layer.cornerRadius = 8.0;
+    boundView.frame = CGRectMake(self.view.bounds.size.height/4+self.view.frame.size.width/4,
+                                 self.view.frame.size.width/4,
+                                 self.view.frame.size.width/2,
+                                 self.view.frame.size.width/2);
+    [boundView.layer setBorderColor:[UIColor orangeColor].CGColor];
+    [self.view addSubview:boundView];
+    
     
     [captureSession startRunning];
 }
@@ -99,10 +112,13 @@ typedef enum {
     
     previewLayer = [[AVCaptureVideoPreviewLayer alloc]initWithSession:captureSession];
     [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+    previewLayer.connection.videoOrientation = AVCaptureVideoOrientationLandscapeRight;
+    
     previewLayer.frame = self.videoView.bounds;
 
     [self.videoView.layer addSublayer:previewLayer];
-
+    
+    
 }
 
 - (IBAction)startAction:(id)sender {
@@ -195,8 +211,10 @@ typedef enum {
     int y = 0;
     int x = 0;
     
-    for(y=0;y<size.height;y++){
-        for(x=0;x<size.width;x++){
+    //NSLog(@"photo size = %f, %f",size.width,size.height);
+    
+    for(y=floor(size.height/4);y<floor(size.height/4*3);y++){
+        for(x=floor(size.width/2-size.height/8-150);x<floor(size.width/2 + size.height/8-150);x++){
             uint8_t *rgbaPixel = (uint8_t *)&pixels[y * (int)size.width + x];
             //uint32_t gray = 0.3 * rgbaPixel[RED] + 0.59 * rgbaPixel[GREEN] + 0.11 * rgbaPixel[BLUE];
             //rgbaPixel[RED] = gray;
@@ -265,6 +283,7 @@ typedef enum {
         NSLog(@"mesg = %@",mesg);
         if(recvChar == 10){
             dispatch_async(dispatch_get_main_queue(), ^{
+                [mesg appendString:@">>> "];
                 self.messageField.text = mesg;
             });
             isRecvMesg = NO;
